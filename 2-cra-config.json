@@ -1,0 +1,96 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Analysis of the companies register",
+    "summary": "Analysis of companies on the register in the United Kingdom by period of incorporation",
+    "description": "1. Unless otherwise stated, Companies refers to companies registered under the Companies Act 2006. 2. In October 2009, the Northern Ireland Register merged with the Register for Great Britain to create a UK Register. UK figures are from 2010 onwards. 3. Period of incorporation is in calendar years (1 January - 31 December). Figures published are a snapshot at 31 December. 4. There maybe minor discrepancies when comparing data across other tables within this report. This is due to slight scheduling variations when extracting the data. 5. The figures provided in these tables differ from other data / statistics held and published by Companies House, which include our URI statistics, Mobile Telephone App statistics, the free bulk products data and the API. This is due to differences in the types of company included in the figures: the figures presented here focus on Companies Act 2006 companies only while others include wider corporate body types. 6. Companies registered in the Channel Islands and the Isle of Man are excluded from the UK Companies Register.",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "public_contact_point_uri": "mailto:statistics@companieshouse.gov.uk",
+    "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
+    "publisher": "https://www.gov.uk/government/organisations/companies-house",
+    "creator": "https://www.gov.uk/government/organisations/companies-house",
+    "dataset_issued": "2022-03-31T00:00:00Z",
+    "dataset_modified": "2022-03-31T00:00:00Z",
+    "keywords": ["companies", 
+                 "companieshouse", 
+                 "liability", 
+                 "limited", 
+                 "company", 
+                 "corporate"],
+    "columns": {  
+        "Period of incorporation": {
+            "type": "dimension",
+            "label": "Period of incorporation"
+        },
+        "Number of incorporations": {
+            "type": "observations",
+            "measure": {
+                "label": "Number of incorporations",
+                "description": "Number of companies incorporated",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        },
+        "On_reg_22": {
+            "from_template": "day"
+        },
+        "Total register_1": {
+            "type": "observations",
+            "measure": {
+                "label": "Total register_1",
+                "description": "Number of companies at beginning of period",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        },
+        "Total register_1": {
+            "type": "observations",
+            "measure": {
+                "label": "Number of companies at end of period",
+                "description": "Number of companies in liquidation/course of dissolution",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        },
+        "Total register_2": {
+            "from_template": "day"
+        },
+        "In liquidation/course of dissolution": {
+            "type": "observations",
+            "measure": {
+                "label": "In liquidation/course of dissolution",
+                "description": "Number of companies in liquidation/course of dissolution",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        },
+        "Effective register": {
+            "type": "observations",
+            "measure": {
+                "label": "Effective register",
+                "description": "Real number of companies registered",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        }
+    }
+}

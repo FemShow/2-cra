@@ -1,0 +1,1156 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "analysis-of-the-companies-register.csv#dataset",
+    "tables": [
+        {
+            "url": "analysis-of-the-companies-register.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Period of incorporation",
+                        "name": "period_of_incorporation",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+                        "valueUrl": "period-of-incorporation.csv#{+period_of_incorporation}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Number of incorporations",
+                        "name": "number_of_incorporations",
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#measure/number-of-incorporations",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "On_reg_21",
+                        "name": "on_reg_21",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+                        "valueUrl": "on_reg_21.csv#{+on_reg_21}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Total register_1",
+                        "name": "total_register_1",
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Total register_2",
+                        "name": "total_register_2",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+total_register_2}",
+                        "required": true
+                    },
+                    {
+                        "titles": "On_reg_22",
+                        "name": "on_reg_22",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+on_reg_22}",
+                        "required": true
+                    },
+                    {
+                        "titles": "In liquidation/course of dissolution",
+                        "name": "in_liquidation_course_of_dissolution",
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Effective register",
+                        "name": "effective_register",
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#measure/effective-register",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "analysis-of-the-companies-register.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_number_of_incorporations",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations"
+                    },
+                    {
+                        "name": "virt_obs_number_of_incorporations_meas",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "analysis-of-the-companies-register.csv#measure/number-of-incorporations"
+                    },
+                    {
+                        "name": "virt_obs_number_of_incorporations_unit",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "analysis-of-the-companies-register.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_number_of_incorporations_period_of_incorporation",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+                        "valueUrl": "period-of-incorporation.csv#{+period_of_incorporation}"
+                    },
+                    {
+                        "name": "virt_dim_number_of_incorporations_on_reg_21",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+                        "valueUrl": "on_reg_21.csv#{+on_reg_21}"
+                    },
+                    {
+                        "name": "virt_dim_number_of_incorporations_total_register_2",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+total_register_2}"
+                    },
+                    {
+                        "name": "virt_dim_number_of_incorporations_on_reg_22",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+on_reg_22}"
+                    },
+                    {
+                        "name": "virt_obs_number_of_incorporations_type",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_number_of_incorporations",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-incorporations",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "analysis-of-the-companies-register.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_total_register_1",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period"
+                    },
+                    {
+                        "name": "virt_obs_total_register_1_meas",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period"
+                    },
+                    {
+                        "name": "virt_obs_total_register_1_unit",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "analysis-of-the-companies-register.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_total_register_1_period_of_incorporation",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+                        "valueUrl": "period-of-incorporation.csv#{+period_of_incorporation}"
+                    },
+                    {
+                        "name": "virt_dim_total_register_1_on_reg_21",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+                        "valueUrl": "on_reg_21.csv#{+on_reg_21}"
+                    },
+                    {
+                        "name": "virt_dim_total_register_1_total_register_2",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+total_register_2}"
+                    },
+                    {
+                        "name": "virt_dim_total_register_1_on_reg_22",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+on_reg_22}"
+                    },
+                    {
+                        "name": "virt_obs_total_register_1_type",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_total_register_1",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@number-of-companies-at-end-of-period",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "analysis-of-the-companies-register.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_in_liquidation_course_of_dissolution",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution"
+                    },
+                    {
+                        "name": "virt_obs_in_liquidation_course_of_dissolution_meas",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution"
+                    },
+                    {
+                        "name": "virt_obs_in_liquidation_course_of_dissolution_unit",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "analysis-of-the-companies-register.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_in_liquidation_course_of_dissolution_period_of_incorporation",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+                        "valueUrl": "period-of-incorporation.csv#{+period_of_incorporation}"
+                    },
+                    {
+                        "name": "virt_dim_in_liquidation_course_of_dissolution_on_reg_21",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+                        "valueUrl": "on_reg_21.csv#{+on_reg_21}"
+                    },
+                    {
+                        "name": "virt_dim_in_liquidation_course_of_dissolution_total_register_2",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+total_register_2}"
+                    },
+                    {
+                        "name": "virt_dim_in_liquidation_course_of_dissolution_on_reg_22",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+on_reg_22}"
+                    },
+                    {
+                        "name": "virt_obs_in_liquidation_course_of_dissolution_type",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_in_liquidation_course_of_dissolution",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@in-liquidation/course-of-dissolution",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "analysis-of-the-companies-register.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_effective_register",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register"
+                    },
+                    {
+                        "name": "virt_obs_effective_register_meas",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "analysis-of-the-companies-register.csv#measure/effective-register"
+                    },
+                    {
+                        "name": "virt_obs_effective_register_unit",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "analysis-of-the-companies-register.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_effective_register_period_of_incorporation",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+                        "valueUrl": "period-of-incorporation.csv#{+period_of_incorporation}"
+                    },
+                    {
+                        "name": "virt_dim_effective_register_on_reg_21",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+                        "valueUrl": "on_reg_21.csv#{+on_reg_21}"
+                    },
+                    {
+                        "name": "virt_dim_effective_register_total_register_2",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+total_register_2}"
+                    },
+                    {
+                        "name": "virt_dim_effective_register_on_reg_22",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "analysis-of-the-companies-register.csv#dimension/day",
+                        "valueUrl": "day.csv#{+on_reg_22}"
+                    },
+                    {
+                        "name": "virt_obs_effective_register_type",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_effective_register",
+                        "virtual": true,
+                        "aboutUrl": "analysis-of-the-companies-register.csv#obs/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}@effective-register",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "analysis-of-the-companies-register.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "period_of_incorporation",
+                        "reference": {
+                            "resource": "period-of-incorporation.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "on_reg_21",
+                        "reference": {
+                            "resource": "on_reg_21.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "total_register_2",
+                        "reference": {
+                            "resource": "day.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "on_reg_22",
+                        "reference": {
+                            "resource": "day.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "period_of_incorporation",
+                    "on_reg_21",
+                    "total_register_2",
+                    "on_reg_22"
+                ],
+                "aboutUrl": "analysis-of-the-companies-register.csv#slice/{period_of_incorporation},{on_reg_21},{total_register_2},{on_reg_22}"
+            }
+        },
+        {
+            "url": "period-of-incorporation.csv",
+            "tableSchema": "period-of-incorporation.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "on_reg_21.csv",
+            "tableSchema": "on_reg_21.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "day.csv",
+            "tableSchema": "day.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "day.csv",
+            "tableSchema": "day.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "analysis-of-the-companies-register.csv#dataset",
+            "@type": [
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/companies-house"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "1. Unless otherwise stated, Companies refers to companies registered under the Companies Act 2006. 2. In October 2009, the Northern Ireland Register merged with the Register for Great Britain to create a UK Register. UK figures are from 2010 onwards. 3. Period of incorporation is in calendar years (1 January - 31 December). Figures published are a snapshot at 31 December. 4. There maybe minor discrepancies when comparing data across other tables within this report. This is due to slight scheduling variations when extracting the data. 5. The figures provided in these tables differ from other data / statistics held and published by Companies House, which include our URI statistics, Mobile Telephone App statistics, the free bulk products data and the API. This is due to differences in the types of company included in the figures: the figures presented here focus on Companies Act 2006 companies only while others include wider corporate body types. 6. Companies registered in the Channel Islands and the Isle of Man are excluded from the UK Companies Register."
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Analysis of the companies register"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2022-03-31T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2022-03-31T00:00:00"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/companies-house"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Analysis of the companies register"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Analysis of companies on the register in the United Kingdom by period of incorporation"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Analysis of the companies register"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "company"
+                },
+                {
+                    "@language": "en",
+                    "@value": "liability"
+                },
+                {
+                    "@language": "en",
+                    "@value": "corporate"
+                },
+                {
+                    "@language": "en",
+                    "@value": "companieshouse"
+                },
+                {
+                    "@language": "en",
+                    "@value": "limited"
+                },
+                {
+                    "@language": "en",
+                    "@value": "companies"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#theme": [
+                {
+                    "@id": "https://www.ons.gov.uk/economy/economicoutputandproductivity"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/day",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                },
+                {
+                    "@value": 9
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dimension/day",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "day.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#class/day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#measure/effective-register",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Real number of companies registered"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Effective register"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#class/on_reg_21",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#SliceKey",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/on_reg_21"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/day"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "period-of-incorporation.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Period of incorporation"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#class/period-of-incorporation"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Number of companies in liquidation/course of dissolution"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "In liquidation/course of dissolution"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#class/day",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/period-of-incorporation",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/in-liquidation/course-of-dissolution",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 11
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/measure-type"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/unit"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/day"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/effective-register"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/number-of-companies-at-end-of-period"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/on_reg_21"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/period-of-incorporation"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/number-of-incorporations"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#component/in-liquidation/course-of-dissolution"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-incorporations"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/period-of-incorporation"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/day"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/effective-register"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/on_reg_21"
+                },
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/in-liquidation/course-of-dissolution"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dimension/on_reg_21",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "on_reg_21.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "On_reg_21"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#class/on_reg_21"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#measure/number-of-incorporations",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Number of companies incorporated"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of incorporations"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/number-of-incorporations",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-incorporations"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-incorporations"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/number-of-companies-at-end-of-period",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/on_reg_21",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/on_reg_21"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#dimension/on_reg_21"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#class/period-of-incorporation",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                },
+                {
+                    "@value": 6
+                },
+                {
+                    "@value": 10
+                },
+                {
+                    "@value": 12
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#measure/number-of-companies-at-end-of-period",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Number of companies in liquidation/course of dissolution"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of companies at end of period"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#component/effective-register",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/effective-register"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "analysis-of-the-companies-register.csv#measure/effective-register"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 13
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dependency/period-of-incorporation",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./period-of-incorporation.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "period-of-incorporation.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dependency/on_reg_21",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./on_reg_21.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "on_reg_21.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dependency/day",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./day.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "day.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#dependency/day",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./day.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "day.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "analysis-of-the-companies-register.csv#unit/number",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number"
+                }
+            ]
+        }
+    ]
+}
